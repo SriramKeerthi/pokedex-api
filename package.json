@@ -1,0 +1,30 @@
+{
+  "name": "pokedex-api",
+  "version": "1.0.0",
+  "description": "Pokedex API to wrap around external APIs",
+  "main": "bin/app.js",
+  "author": "Sriram",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start:dev": "ts-node-dev --respawn ./src/app.ts",
+    "start": "node ."
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.33",
+    "@types/sharp": "^0.30.2",
+    "ts-node-dev": "^1.1.8",
+    "tslint": "^6.1.3"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "imagemin": "^8.0.1",
+    "jimp": "^0.16.1",
+    "sharp": "^0.30.4",
+    "typescript": "^4.6.4"
+  }
+}
